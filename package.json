@@ -10,9 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@ihealth/ihealthlibrary-react-native": "^1.9.0",
+    "@react-native/new-app-screen": "0.80.0",
     "react": "19.1.0",
-    "react-native": "0.80.0",
-    "@react-native/new-app-screen": "0.80.0"
+    "react-native": "0.80.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
