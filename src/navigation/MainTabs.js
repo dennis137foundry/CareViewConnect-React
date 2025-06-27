@@ -1,11 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-
 import DashboardScreen from '../screens/DashboardScreen';
 import GetVitalsScreen from '../screens/GetVitalsScreen';
 import HistoryScreen from '../screens/HistoryScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import SettingsStack from '../navigation/SettingsStack';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -37,7 +37,13 @@ export default function MainTabs() {
       <Tab.Screen name="Dashboard" component={DashboardScreen} />
       <Tab.Screen name="GetVitals" component={GetVitalsScreen} />
       <Tab.Screen name="History" component={HistoryScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen
+        name="Settings"
+        component={SettingsStack}
+        options={{ headerShown: false }}
+        />
+
+
     </Tab.Navigator>
   );
 }
